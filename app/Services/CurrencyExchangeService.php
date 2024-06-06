@@ -38,6 +38,6 @@ class CurrencyExchangeService
         $rate = $this->rates[$source][$target];
         $result = $amount * $rate;
 
-        return round($result, 2);
+        return number_format(round($result, 2), 2, '.', ',');
     }
 }

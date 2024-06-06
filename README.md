@@ -13,3 +13,13 @@ build and up docker
 ```
 docker-compose up --build
 ```
+## Run
+run
+```
+docker-compose up -d
+```
+## Test
+run all test case
+```
+php artisan test
+```
