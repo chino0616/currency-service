@@ -5,3 +5,4 @@
 /.htaccess
 /.composer
 /.bash_history
+/.phpunit.result.cache
