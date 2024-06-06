@@ -2,8 +2,10 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use App\Services\CurrencyExchangeService;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CurrencyExchangeServiceTest extends TestCase
 {
@@ -12,7 +14,7 @@ class CurrencyExchangeServiceTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->service = new CurrencyExchangeService();
+        $this->service = $this->app->make(CurrencyExchangeService::class);
     }
 
     public function testConversionWithValidData()

@@ -21,7 +21,7 @@ class CurrencyExchangeController extends Controller
 
         return response()->json([
             'msg' => 'success',
-            'amount' => number_format($result, 2)
+            'amount' => $result
         ]);
     }
 }
